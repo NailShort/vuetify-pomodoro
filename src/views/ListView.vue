@@ -1,8 +1,8 @@
 <template lang="pug">
 v-row#list
-  v-col(cols="12")
+  v-col(cols="10")
     h1.text-center 待辦事項
-  v-col(cols="12")
+  v-col(cols="10")
     v-text-field(ref="input" v-model="newItem" label="新增事項" :rules="[rules.required, rules.length]" @keydown.enter="onInputSubmit")
       template(#append)
         v-btn(icon="mdi-plus" variant="text" @click="onInputSubmit")
@@ -26,9 +26,9 @@ v-row#list
               v-btn(icon="mdi-pencil" variant="text" color="green" @click="editItem(item.id)")
               v-btn(icon="mdi-delete" variant="text" color="red" @click="delItem(item.id)")
   v-divider
-  v-col(cols="12")
+  v-col(cols="10")
     h1.text-center 已完成事項
-  v-col(cols="12")
+  v-col(cols="10")
     v-table
       thead
         tr

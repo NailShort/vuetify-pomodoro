@@ -1,7 +1,7 @@
 <template lang="pug">
 v-app
-  v-app-bar(color="primary")
-    v-app-bar-title 番茄鐘
+  v-app-bar
+    v-app-bar-title Pomodoro
     v-spacer
     v-btn(icon="mdi-home" variant="text" to="/")
     v-btn(icon="mdi-format-list-bulleted" variant="text" to="/list")
@@ -24,3 +24,42 @@ const settings = useSettingsStore()
 const { notify } = storeToRefs(settings)
 const { toggleNotify } = settings
 </script>
+
+<style scoped lang="scss">
+@import url('https://fonts.googleapis.com/css2?family=Rowdies:wght@300;400;700&display=swap');
+.v-main{
+  background: url(./images/bg.jpg) no-repeat center/cover;
+  background-position-y: 80%;
+}
+.v-toolbar{
+  height: 130px;
+  background: url(./images/head-01.png) no-repeat center/cover;
+  background-position-y: 80%;
+  box-shadow: none;
+}
+
+.v-app-bar.v-toolbar:not(.v-toolbar--flat) {
+  box-shadow:none;
+}
+
+.v-toolbar-title {
+  font-size: 40px;
+  color: rgb(65,110,175);
+  font-family: 'Rowdies', cursive;
+  line-height: 31px;
+  text-indent: 10px;
+}
+
+.v-toolbar-title__placeholder{
+  height: 10px;
+}
+
+.v-toolbar-title  {
+  border-left: 5px solid rgb(20,40,65);
+}
+
+.v-toolbar__content a,button{
+  color: rgb(65,110,175);
+}
+
+</style>

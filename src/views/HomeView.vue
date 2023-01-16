@@ -1,9 +1,9 @@
 <template lang="pug">
 v-row#home
-  v-col(cols="12")
+  v-col(cols="7")(style="background:rgba(20,40,65,0.8);border-radius: 20px 20px 0 0 ; ")
     h1 {{ currentText }}
     h1 {{ currentTime }}
-  v-col(cols="12")
+  v-col(cols="7")(style="background:rgba(20,40,65,0.8);border-radius: 0 0 20px 20px; ")
     v-btn(v-if="status !== 1" icon="mdi-play" variant="text" @click="startTimer")
     v-btn(v-if="status === 1" icon="mdi-pause" variant="text" @click="pauseTimer")
     v-btn(v-if="currentItem.length > 0" icon="mdi-skip-next" variant="text" @click="finishTimer")
@@ -74,3 +74,30 @@ const currentTime = computed(() => {
   return m + ':' + s
 })
 </script>
+
+<style lang="scss">
+  .v-main{
+    position: relative;
+  }
+  .v-container{
+    position: absolute;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+  }
+
+  .v-col{
+    margin: auto;
+
+  }
+
+  h1{
+    color: white;
+  }
+
+  .v-col button{
+  color: white;
+}
+
+</style>

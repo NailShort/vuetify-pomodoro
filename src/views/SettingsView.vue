@@ -1,8 +1,8 @@
 <template lang="pug">
 v-row#settings
-  v-col(cols="12")
+  v-col(cols="10")
     h1.text-center 設定
-  v-col(cols="12")
+  v-col(cols="10")
     v-table
       thead
         tr
