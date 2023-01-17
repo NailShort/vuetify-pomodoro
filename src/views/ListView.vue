@@ -74,3 +74,9 @@ const onInputSubmit = async () => {
   input.value.reset()
 }
 </script>
+
+<style lang="scss">
+.v-field__field{
+  background: white;
+}
+</style>
